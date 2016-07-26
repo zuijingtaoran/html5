@@ -1,0 +1,118 @@
+  table {
+  	border-collapse: collapse;
+  	border: 1px solid #c0c0c0;
+  	width: 99%;
+  	top: 7px;
+  }
+  
+  table td {
+  	border: 1px solid #e5e5e5;
+  	color: #393939;
+  }
+  /*background-color:#f0f0f0; color:#6e6e6e;*/
+  
+  table th {
+  	background-color: #009fdd;
+  	height: 26px;
+  	color: #fff;
+  	border: 1px solid #e5e5e5;
+  	position: relative;
+  	overflow: visible;
+  	z-index: 1;
+  }
+  /*======= firsh(0)====================================*/
+  
+  .table-radius th:first-child {
+  	padding-left: 10px;
+  }
+  
+  .table-radius th:first-child::before {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	left: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #fff;
+  	border: none;
+  	z-index: 2;
+  }
+  
+  .table-radius th:first-child::after {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	left: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #009fdd;
+  	border: 1px solid #e5e5e5;
+  	border-right: none;
+  	border-bottom: none;
+  	border-radius: 100% 0% 0% 0%;
+  	z-index: 3;
+  }
+  /*=========================== last(0)======================*/
+  
+  .table-radius-0 th:last-child {
+  	padding-left: 10px;
+  }
+  
+  .table-radius-0 th:last-child::before {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	right: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #fff;
+  	border: none;
+  	z-index: 2;
+  }
+  
+  .table-radius-0 th:last-child::after {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	right: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #009fdd;
+  	border: 1px solid #e5e5e5;
+  	border-left: none;
+  	border-bottom: none;
+  	border-radius: 0% 100% 0% 0%;
+  	z-index: 3;
+  }
+  /* ==================last(1)======================*/
+  
+  .table-radius-1 th:nth-last-child(1) {
+  	padding-left: 10px;
+  }
+  
+  .table-radius-1 th:nth-last-child(1)::before {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	right: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #fff;
+  	border: none;
+  	z-index: 2;
+  }
+  
+  .table-radius-1 th:nth-last-child(1)::after {
+  	content: '';
+  	position: absolute;
+  	top: -1px;
+  	right: -1px;
+  	width: 10px;
+  	height: 10px;
+  	background-color: #009fdd;
+  	border: 1px solid #e5e5e5;
+  	border-left: none;
+  	border-bottom: none;
+  	border-radius: 0% 100% 0% 0%;
+  	z-index: 3;
+  }

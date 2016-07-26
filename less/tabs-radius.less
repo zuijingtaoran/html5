@@ -1,0 +1,116 @@
+@size: 10px;
+@bg-col: #009fdd;
+@ft-col: #393939;
+@body-col: #fff;
+@cont: '';
+@post: -1px;
+@z-ind: 1;
+.border-sty(@x:1px, @y:solid, @z:#e5e5e5) {
+    border: @arguments;
+}
+.fir-end-comm() {
+    content: @cont;
+    position: absolute;
+    top: @post;
+    width: @size;
+    height: @size;
+    border: none;
+}
+.lst-radius-bef(){
+    
+    .fir-end-comm;
+    right: @post;
+    background-color: @body-col;
+    border: none;
+    z-index: @z-ind+1; ///here
+}
+.lst-radius-after(){
+    
+    .fir-end-comm;
+    background-color: @bg-col;
+    right: @post;
+    .border-sty;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 100% 0 0;
+    z-index: @z-ind+2;
+}
+/*****************************/
+.tabs {
+    border-collapse: collapse;
+    .border-sty(1px,solod,#c0c0c0);
+    width: 99%;
+    top: 7px;
+}
+.tabs td {
+    .border-sty;
+    color: @ft-col;
+}
+/*background-color:#f0f0f0; color:#6e6e6e;*/
+.tabs th {
+    background-color: @bg-col;
+    height: 26px;
+    color: #fff;
+    .border-sty;
+    position: relative;
+    overflow: visible;
+    z-index: @z-ind;
+}
+/*======= firsh(0)====================================*/
+.table-radius th:first-child {
+    padding-left: @size;
+}
+.table-radius th:first-child::before {
+      .fir-end-comm;
+    background-color: @body-col;
+    left: @post;
+    z-index: @z-ind+1;
+}
+.table-radius th:first-child::after {
+    .fir-end-comm;
+    left: @post;
+    background-color: @bg-col;
+    .border-sty;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 100% 0 0 0;
+    z-index: @z-ind+1;
+}
+/*=========================== last(0)======================*/
+.table-radius-0 th:last-child {
+    padding-right: @size;
+}
+.table-radius-0 th:last-child::before {
+   .lst-radius-bef;
+}
+.table-radius-0 th:last-child::after {
+  .lst-radius-after;
+}
+
+/* ==================last(1)======================*/
+.table-radius-1 th:nth-last-child(1) {
+    padding-right: @size;
+}
+.table-radius-1 th:nth-last-child(1)::before {
+     .lst-radius-bef;
+}
+.table-radius-1 th:nth-last-child(1)::after {
+ .lst-radius-after;
+}     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
