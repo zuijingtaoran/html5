@@ -1,0 +1,10 @@
+/* line 10, tt1.less */
+.box {
+  color: #00b88c;
+  border-color: #52ffd6;
+}
+/* line 13, tt1.less */
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

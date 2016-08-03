@@ -1,0 +1,111 @@
+/*****************************/
+.tabs {
+  border-collapse: collapse;
+  border: 1px solod #c0c0c0;
+  width: 99%;
+  top: 7px;
+}
+.tabs td {
+  border: 1px solid #e5e5e5;
+  color: #393939;
+}
+/*background-color:#f0f0f0; color:#6e6e6e;*/
+.tabs th {
+  background-color: #009fdd;
+  height: 26px;
+  color: #fff;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+/*======= firsh(0)====================================*/
+.table-radius th:first-child {
+  padding-left: 10px;
+}
+.table-radius th:first-child::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #ffffff;
+  left: -1px;
+  z-index: 2;
+}
+.table-radius th:first-child::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  left: -1px;
+  background-color: #009fdd;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 100% 0 0 0;
+  z-index: 2;
+}
+/*=========================== last(0)======================*/
+.table-radius-0 th:last-child {
+  padding-right: 10px;
+}
+.table-radius-0 th:last-child::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  right: -1px;
+  background-color: #ffffff;
+  border: none;
+  z-index: 2;
+}
+.table-radius-0 th:last-child::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #009fdd;
+  right: -1px;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 100% 0 0;
+  z-index: 3;
+}
+/* ==================last(1)======================*/
+.table-radius-1 th:nth-last-child(1) {
+  padding-right: 10px;
+}
+.table-radius-1 th:nth-last-child(1)::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  right: -1px;
+  background-color: #ffffff;
+  border: none;
+  z-index: 2;
+}
+.table-radius-1 th:nth-last-child(1)::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #009fdd;
+  right: -1px;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 100% 0 0;
+  z-index: 3;
+}
